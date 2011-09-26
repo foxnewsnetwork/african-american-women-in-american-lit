@@ -1,4 +1,6 @@
 Calhack::Application.routes.draw do
+  resources :users
+
   resource :users
   
   match '/signup' , :to => 'users#new'

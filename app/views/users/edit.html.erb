@@ -1,11 +1,6 @@
-<h1>Edit user</h1>
+<h1>Editing user</h1>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages', :object => f.object %>
-  <%= render 'users/form' , :f => f %>
-  <div class="action">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+<%= render 'form' %>
 
-
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
