@@ -1,0 +1,17 @@
+<%= form_for @macropost do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="title">
+    <%= f.label :title, 'Title' %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="location_id">
+    <input type="hidden" id="macropost_location_id" name="macropost[location_id]" value="<%= @location_id %>" />
+  </div>
+  <div class="field">
+    <%= f.label :content, "Stuff" %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

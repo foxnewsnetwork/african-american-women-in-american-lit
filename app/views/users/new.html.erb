@@ -1,0 +1,9 @@
+<h1>Join us...</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' , :object => f.object %>
+  <%= render 'users/form' , :f => f %>
+  <div class="action">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
